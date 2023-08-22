@@ -3,15 +3,7 @@ package Solutions;
 import java.util.Scanner;
 
 public class Palindrome {
-    public static void test() {
-        Scanner scan = new Scanner(System.in);
-        String s = null;
-        System.out.print("Введите слово: ");
-        s = scan.nextLine();
-        System.out.println(isPalindrome(s));
-    }
-
-    private static boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String s) {
         if (s.isEmpty() || s.equals(" ") || s.length() == 1) {
             return true;
         }
