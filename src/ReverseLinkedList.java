@@ -7,7 +7,12 @@ public class ReverseLinkedList {
         list.next.next = new ListNode(14);
         list.next.next.next = new ListNode(78);
 
-        System.out.println(reverseList(list).toString());
+        System.out.print("Список до изменения: ");
+        printList(list);
+        System.out.println(); // переход на новую строку
+        list = reverseList(list);
+        System.out.print("Список после изменения: ");
+        printList(list);
     }
 
     private static ListNode reverseList(ListNode head) {
@@ -21,8 +26,16 @@ public class ReverseLinkedList {
             current = nextNode;
 
         }
+        head = prev;
+        return head;
+    }
 
-        return prev;
+    private static void printList(ListNode node)
+    {
+        while (node != null) {
+            System.out.print(node.val + " ");
+            node = node.next;
+        }
     }
 
     private static class ListNode {
