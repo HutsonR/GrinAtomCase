@@ -1,3 +1,5 @@
+package Solutions;
+
 import java.util.LinkedList;
 
 public class ReverseLinkedList {
@@ -13,6 +15,7 @@ public class ReverseLinkedList {
         list = reverseList(list);
         System.out.print("Список после изменения: ");
         printList(list);
+        System.out.println();
     }
 
     private static ListNode reverseList(ListNode head) {
