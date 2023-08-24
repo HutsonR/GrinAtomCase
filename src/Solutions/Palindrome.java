@@ -1,7 +1,5 @@
 package Solutions;
 
-import java.util.Scanner;
-
 /**
  * The Palindrome class provides a method to check if a given string is a palindrome.
  */
