@@ -49,4 +49,15 @@ public class SwapVariablesTest {
         assertEquals(b, result[0]);
         assertEquals(a, result[1]);
     }
+
+    @Test
+    public void testSwapWithNegativeAndPositiveValues() {
+        int a = -9;
+        int b = 100;
+
+        int[] result = SwapVariables.swap(a, b);
+
+        assertEquals(b, result[0]);
+        assertEquals(a, result[1]);
+    }
 }
