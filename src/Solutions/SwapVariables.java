@@ -1,7 +1,5 @@
 package Solutions;
 
-import java.util.Scanner;
-
 public class SwapVariables {
     public static void swap(int a, int b) {
         a = a + b;
