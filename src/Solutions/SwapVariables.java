@@ -1,10 +1,10 @@
 package Solutions;
 
 public class SwapVariables {
-    public static void swap(int a, int b) {
+    public static int[] swap(int a, int b) {
         a = a + b;
         b = a - b;
         a = a - b;
-        System.out.println("После обмена: a = "+a+", b = "+b);
+        return new int[]{a, b};
     }
 }
