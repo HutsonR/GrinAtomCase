@@ -21,5 +21,35 @@ public class ReverseLinkedListTest {
         assertEquals(65, reversedList.next.next.val);
         assertEquals(5, reversedList.next.next.next.val);
     }
+
+    @Test
+    public void testReverseListWithSingleNode() {
+        ListNode originalList = new ListNode(42);
+
+        ListNode reversedList = ReverseLinkedList.reverseList(originalList);
+
+        assertEquals(42, reversedList.val);
+        assertNull(reversedList.next);
+    }
+
+    @Test
+    public void testReverseListWithMultipleNodes() {
+        ListNode originalList = new ListNode(1);
+        originalList.next = new ListNode(2);
+        originalList.next.next = new ListNode(3);
+        originalList.next.next.next = new ListNode(4);
+
+        ListNode reversedList = ReverseLinkedList.reverseList(originalList);
+
+        assertEquals(4, reversedList.val);
+        assertEquals(3, reversedList.next.val);
+        assertEquals(2, reversedList.next.next.val);
+        assertEquals(1, reversedList.next.next.next.val);
+    }
+
+    @Test
+    public void testReverseListWithNull() {
+        assertNull(ReverseLinkedList.reverseList(null));
+    }
 }
 
